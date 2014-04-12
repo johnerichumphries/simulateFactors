@@ -1,0 +1,14 @@
+Package: simulateFactors
+Type: Package
+Title: Simulates factors from a system of equations (probit and )
+Version: 0.3
+Date: 2014-04-12
+Author: John Eric Humphries
+Maintainer: John Eric Humphries <johneric@uchicago.edu>
+Description: This file simulates a system of (binary and continuous) equations
+    where the dependent variable is determined by observed covariates and
+    unobserved factors. You can specify a fair amount about the system of
+    equations, including support for correlated factors and a simple way to
+    specify exclusion restrictions. This code is meant purely for testing and
+    debugging factor models
+License: GNU General Public License v3
