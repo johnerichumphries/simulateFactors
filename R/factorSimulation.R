@@ -55,8 +55,8 @@ GenerateFactorData <- function(n=1000, nF=2, nX=5, nM=5, nD=5, sigma2.var=c(.5,4
   colnames(beta.true) <- rep("beta",nX)
   alpha.true[1:nM,]  <- rnorm(nF*(nM),mean=0,sd=2)
   beta.true[1:nM,]   <- runif(nX*(nM),-3,3)
-  alpha.true[(nM+1):(nM+nD),]  <- rnorm(nF*(nM),mean=0,sd=.15)
-  beta.true[(nM+1):(nM+nD),]   <- rnorm(nX*(nM),mean=0,sd=.2)
+  alpha.true[(nM+1):(nM+nD),]  <- rnorm(nF*(nD),mean=0,sd=.15)
+  beta.true[(nM+1):(nM+nD),]   <- rnorm(nX*(nD),mean=0,sd=.2)
   alpha.true[1:nF,1:nF] <- normalize
   sigma2.true <-        c(runif(nM,sigma2.var[1],sigma2.var[2]),rep(1,nD))
   
@@ -87,6 +87,6 @@ GenerateFactorData <- function(n=1000, nF=2, nX=5, nM=5, nD=5, sigma2.var=c(.5,4
   #saving files
   varnames <- as.matrix(colnames(simData))
   write.table(varnames, file = paste(filename, "_varnames.txt",sep = ""), col.names=F, row.names=F, quote=F)
-  write.table(simData, file = paste(filename, "_simData.raw",sep = ""), col.names=F, row.names=F )
+  write.table(simData, file = paste(filename, "_simData.raw",sep = ""), col.names=T, row.names=F )
   return(list(simData,alpha.true,beta.true))
 }
