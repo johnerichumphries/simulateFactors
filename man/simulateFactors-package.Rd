@@ -13,7 +13,6 @@ This file simulates a system of (binary and continuous) equations
     equations, including support for correlated factors and a simple way to
     specify exclusion restrictions. This code is meant purely for testing and
     debugging factor models}
-}
 \details{
 \tabular{ll}{
 Package: \tab simulateFactors\cr
