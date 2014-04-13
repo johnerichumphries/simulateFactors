@@ -1,4 +1,3 @@
-library("mnormt")
 
 
 #' Simulates Data from a Factor Model.
@@ -32,6 +31,7 @@ GenerateFactorData <- function(n=1000, nF=2, nX=5, nM=5, nD=5, sigma2.var=c(.5,4
   #     corrfactors = logical for if factors ar correlated
   
   # Creating the variance and mean data i drawn from
+  library("mnormt")
   Var            <- matrix(0,nF + nX, nF + nX) # variance/covariance matrix
   Var[1:nF,1:nF] <- runif(nF*nF,min = 0, max = .5)
   Var[(nF+1):(nF+nX),(nF+1):(nF+nX)] <- runif(nX*nX,min = 0, max = .3)
