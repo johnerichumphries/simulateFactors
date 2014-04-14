@@ -87,6 +87,8 @@ GenerateFactorData <- function(n=1000, nF=2, nX=5, nM=5, nD=5, sigma2.var=c(.5,4
   #saving files
   varnames <- as.matrix(colnames(simData))
   write.table(varnames, file = paste(filename, "_varnames.txt",sep = ""), col.names=F, row.names=F, quote=F)
+  write.table(beta.true, file = paste(filename, "_betatrue.txt",sep = ""), col.names=F, row.names=F, quote=F)
+  write.table(alpha.true, file = paste(filename, "_alphatrue.txt",sep = ""), col.names=F, row.names=F, quote=F)
   write.table(simData, file = paste(filename, "_simData.raw",sep = ""), col.names=T, row.names=F )
   return(list(simData,alpha.true,beta.true))
 }
