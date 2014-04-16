@@ -1,7 +1,7 @@
 simulateFactors
 ===============
 
-simulates a factor model in R for debugging and testing factor models. 
+Simulates a factor model in R for debugging and testing factor models. 
 
 This package has a single function which generates random simulated data from a system of equations. 
 
